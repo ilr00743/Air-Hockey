@@ -1,37 +1,42 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Player
 {
     public class PlayerMovement : MonoBehaviour
     {
         private Rigidbody2D _rigidbody;
-
-#if UNITY_EDITOR
+        private Camera _camera;
+        private Touch _touch;
+        
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
-            Debug.Log("Editor");
+            _camera = Camera.main;
         }
 
         private void Update()
         {
+#if UNITY_EDITOR
             if (Input.GetMouseButton(0))
             {
-                Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
                 _rigidbody.MovePosition(mousePos);
             }
-        }
 #endif
-        private void Awake()
-        {
-            _rigidbody = GetComponent<Rigidbody2D>();
+            Move();
         }
 
-        public void Move(Touch touch)
+        private void Move()
         {
-            _rigidbody.position = new Vector2();
-            _rigidbody.MovePosition(_rigidbody.position);
+            if (Input.touchCount > 0)
+            {
+                _touch = Input.GetTouch(0);
+                Vector2 touchPosition = _camera.ScreenToWorldPoint(_touch.position);
+                if (_touch.phase == TouchPhase.Moved)
+                {
+                    _rigidbody.MovePosition(touchPosition);
+                }
+            }
         }
     }
 }
