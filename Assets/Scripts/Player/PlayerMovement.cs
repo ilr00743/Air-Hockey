@@ -9,7 +9,7 @@ namespace Player
         private Rigidbody2D _rigidbody;
         private Touch _touch;
 
-        private void Start()
+        private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _camera = Camera.main;
