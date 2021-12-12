@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SettingsUI : MonoBehaviour
+namespace UI
 {
-    public void ReturnToMainMenu()
+    public class SettingsUI : MonoBehaviour
     {
-        SceneManager.LoadScene("MainMenu");
+        public void ReturnToMainMenu()
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }
