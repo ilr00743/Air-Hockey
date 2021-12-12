@@ -14,7 +14,7 @@ namespace Player
             _camera = Camera.main;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
 #if UNITY_EDITOR
             if (Input.GetMouseButton(0))
