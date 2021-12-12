@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Player
 {
@@ -12,7 +13,6 @@ namespace Player
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
-            _camera = Camera.main;
         }
 
         private void FixedUpdate()
