@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     public void Settings()
     {
-        throw new NotImplementedException();
+        SceneManager.LoadScene("Settings");
     }
 
     public void Play()
