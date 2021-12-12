@@ -4,10 +4,11 @@ namespace Player
 {
     public class PlayerMovement : MonoBehaviour
     {
+        [SerializeField] private Camera _camera;
+        [SerializeField] private float _speed;
         private Rigidbody2D _rigidbody;
-        private Camera _camera;
         private Touch _touch;
-        
+
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
@@ -16,13 +17,6 @@ namespace Player
 
         private void FixedUpdate()
         {
-#if UNITY_EDITOR
-            if (Input.GetMouseButton(0))
-            {
-                Vector2 mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
-                _rigidbody.MovePosition(mousePos);
-            }
-#endif
             Move();
         }
 
@@ -32,11 +26,19 @@ namespace Player
             {
                 _touch = Input.GetTouch(0);
                 Vector2 touchPosition = _camera.ScreenToWorldPoint(_touch.position);
-                if (_touch.phase == TouchPhase.Moved)
+                if (_touch.phase == TouchPhase.Moved || _touch.phase == TouchPhase.Stationary)
                 {
-                    _rigidbody.MovePosition(touchPosition);
+                    _rigidbody.MovePosition(Vector2.Lerp(_rigidbody.position, touchPosition, Time.fixedDeltaTime * _speed));
                 }
             }
+            
+#if UNITY_EDITOR
+            if (Input.GetMouseButton(0))
+            {
+                Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+                _rigidbody.MovePosition(Vector2.Lerp(_rigidbody.position, mousePosition, Time.fixedDeltaTime * _speed));
+            }
+#endif
         }
     }
 }
