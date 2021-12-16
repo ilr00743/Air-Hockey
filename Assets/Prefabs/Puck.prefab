@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1163549344291317470}
   - component: {fileID: 1163549344291317468}
   - component: {fileID: 1163549344291317469}
+  - component: {fileID: 2481061954910199205}
   m_Layer: 0
   m_Name: Puck
   m_TagString: Untagged
@@ -97,14 +98,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
-  m_AngularDrag: 2
-  m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: f3f23685f13f3344e874c3a018af8e90, type: 2}
-  m_Interpolate: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &1163549344291317469
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -121,3 +122,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.5201144
+--- !u!114 &2481061954910199205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163549344291317465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011fbc6bb5ab85e40923ac35b74a9c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
