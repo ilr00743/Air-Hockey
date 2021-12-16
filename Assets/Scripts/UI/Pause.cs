@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelUI : MonoBehaviour
+public class Pause : MonoBehaviour
 {
     public void ReturnToMenu()
     {

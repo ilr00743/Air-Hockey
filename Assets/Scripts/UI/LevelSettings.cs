@@ -1,14 +1,17 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 
 namespace UI
 {
-    public class LevelOptionPanel : MonoBehaviour
+    public class LevelSettings : MonoBehaviour
     {
         [SerializeField] private TMP_Text _scoreToWinText;
         [SerializeField] private int _minScore;
         [SerializeField] private int _maxScore;
         private int _scoreToWin;
+
+        public event Action SettingsChanged;
 
         private void Start()
         {
@@ -23,7 +26,6 @@ namespace UI
             }
 
             _scoreToWinText.text = _scoreToWin.ToString();
-            PlayerPrefs.SetInt("Score", _scoreToWin);
         }
 
         public void SubtractScoreToWin()
@@ -34,9 +36,16 @@ namespace UI
             }
             
             _scoreToWinText.text = _scoreToWin.ToString();
-            PlayerPrefs.SetInt("Score", _scoreToWin);
         }
 
+        public void Submit()
+        {
+            SettingsChanged?.Invoke();
+            PlayerPrefs.SetInt("Score", _scoreToWin);
+            _scoreToWin = PlayerPrefs.GetInt("Score");
+            gameObject.SetActive(false);
+        }
+        
         public int GetScoreToWin()
         {
             return _scoreToWin;

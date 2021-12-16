@@ -1,13 +1,11 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace UI
+public class SettingsUI : MonoBehaviour
 {
-    public class SettingsUI : MonoBehaviour
+    public void ReturnToMainMenu()
     {
-        public void ReturnToMainMenu()
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
+        SceneManager.LoadScene("MainMenu");
     }
 }
