@@ -1,5 +1,4 @@
-﻿using System;
-using JetBrains.Annotations;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,35 +7,45 @@ namespace UI
 {
     public class GameOver : MonoBehaviour
     {
+        [SerializeField] private LevelSettings _levelSettings;
         [SerializeField] private GameObject _gameOverPanel;
-        [SerializeField] private GoalTrigger[] _goals = new GoalTrigger[2];
+        [SerializeField] private GoalTrigger[] _goals;
         [SerializeField] private Button _retry, _home;
+        [SerializeField] private TMP_Text _winLose;
         private void OnEnable()
         {
-            foreach (var goal in _goals)
-            {
-                goal.GameOver += OnGameOver;
-            }
+            _goals[0].GameOver += OnGameOver;
+            _goals[1].GameOver += OnGameOver;
+            _retry.onClick.AddListener(Retry);
+            _home.onClick.AddListener(Home);
         }
 
         private void OnDisable()
         {
-            foreach (var goal in _goals)
-            {
-                goal.GameOver -= OnGameOver;
-            }
-        }
-        
-        private void Start()
-        {
-            _retry.onClick.AddListener(Retry);
-            _home.onClick.AddListener(Home);
+            _goals[0].GameOver -= OnGameOver;
+            _goals[1].GameOver -= OnGameOver;
+            _retry.onClick.RemoveListener(Retry);
+            _home.onClick.RemoveListener(Home);
         }
 
         private void OnGameOver()
         {
             EnablePanel();
+            ChooseWinner();
             Time.timeScale = 0;
+        }
+
+        private void ChooseWinner()
+        {
+            /*if (_goals[0].CurrentScore == _levelSettings.GetScoreToWin())
+            {
+                _winLose.SetText("You Win!");
+            }
+            if (_goals[1].CurrentScore == _levelSettings.GetScoreToWin())
+            {
+                _winLose.SetText("You Lose!");
+            }*/
+            _winLose.SetText(_goals[0].CurrentScore == _levelSettings.GetScoreToWin() ? "You Win!" : "You Lose!");
         }
 
         private void EnablePanel()

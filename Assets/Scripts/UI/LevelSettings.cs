@@ -15,9 +15,11 @@ namespace UI
 
         private void Start()
         {
-            _scoreToWin = PlayerPrefs.GetInt("Score", 7);
+            // _scoreToWin = PlayerPrefs.GetInt("Score", 7);
+            _scoreToWin = 7;
             _scoreToWinText.text = _scoreToWin.ToString();
         }
+        
         public void AddScoreToWin()
         {
             if (_scoreToWin < _maxScore)
@@ -41,8 +43,6 @@ namespace UI
         public void Submit()
         {
             SettingsChanged?.Invoke();
-            PlayerPrefs.SetInt("Score", _scoreToWin);
-            _scoreToWin = PlayerPrefs.GetInt("Score");
             gameObject.SetActive(false);
         }
         
