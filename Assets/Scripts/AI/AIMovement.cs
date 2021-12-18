@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class AI : MonoBehaviour
+public class AIMovement : MonoBehaviour
 {
     [SerializeField] private Puck _puck;
     [SerializeField] private float _speedMovement;
@@ -48,7 +48,7 @@ public class AI : MonoBehaviour
 
     private bool IsPuckOnSide()
     {
-        return _puck.GetPosition().y >= 0.3f && _puck.GetPosition().y <= 3.8f;
+        return _puck.GetPosition().y >= 0.2f && _puck.GetPosition().y <= 3.88f;
     }
 
     private void TakeStartPosition()

@@ -10,20 +10,25 @@ public class GoalTrigger : MonoBehaviour
     [SerializeField] private LevelSettings _levelSettings;
     private int _currentScore;
 
+    public int CurrentScore => _currentScore;
+
+    private void Start()
+    {
+        _currentScore = 0;
+    }
+
     public event Action GameOver;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.TryGetComponent(out Puck puck))
         {
-            if (_currentScore + 1 == _levelSettings.GetScoreToWin())
+            _scoreText.text = (++_currentScore).ToString();
+            StartCoroutine(_puck.ResetPosition(0, SetAttackSide()));
+            if (_currentScore == _levelSettings.GetScoreToWin())
             {
                 GameOver?.Invoke();
             }
-            
-            _currentScore++;
-            _scoreText.text = _currentScore.ToString();
-            StartCoroutine(_puck.ResetPosition(0, SetAttackSide()));
         }
     }
 
