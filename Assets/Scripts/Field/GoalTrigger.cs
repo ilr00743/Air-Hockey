@@ -25,14 +25,15 @@ public class GoalTrigger : MonoBehaviour
     {
         if (collider.TryGetComponent(out Puck puck))
         {
-            if (_currentScore == _levelSettings.GetScoreToWin())
-            {
-                GameOver?.Invoke();
-            }
 
             _scoreText.text = (++_currentScore).ToString();
             StartCoroutine(_puck.ResetPosition(0, SetAttackSide()));
             _goalParticle.Play();
+            
+            if (_currentScore == _levelSettings.GetScoreToWin())
+            {
+                GameOver?.Invoke();
+            }
         }
     }
 

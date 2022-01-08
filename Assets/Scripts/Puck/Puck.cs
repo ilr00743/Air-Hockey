@@ -37,9 +37,11 @@ public class Puck : MonoBehaviour
 
     public IEnumerator ResetPosition(float x, float y)
     {
+        this.gameObject.SetActive(false);
         yield return new WaitForSeconds(0.05f);
         _rigidbody.velocity = Vector2.zero;
         yield return new WaitForSeconds(0.5f);
+        this.gameObject.SetActive(true);
         _rigidbody.position = new Vector2(x, y);
     }
 
