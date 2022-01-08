@@ -17,7 +17,6 @@ public class Puck : MonoBehaviour
     private void FixedUpdate()
     {
         LimitVelocity();
-        // LimitMovement();
     }
 
     private void LimitVelocity()
