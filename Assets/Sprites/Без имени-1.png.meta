@@ -1,34 +1,19 @@
 fileFormatVersion: 2
-guid: 79d46a807722c3240a6209fdc59d6508
+guid: f1b3fd82c36593b4c9dfcd447cfc13ec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -997972493423046422
-    second: atlas_0
+      213: -6937154614026109424
+    second: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_0"
   - first:
-      213: -199644854353079308
-    second: atlas_1
+      213: -7808312638233353911
+    second: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_1"
   - first:
-      213: -217455086581007235
-    second: atlas_2
+      213: -7119211847882328048
+    second: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_2"
   - first:
-      213: 4335250483284255847
-    second: atlas_3
-  - first:
-      213: -983156657889264743
-    second: atlas_4
-  - first:
-      213: -982414535385901495
-    second: Textures_1_0
-  - first:
-      213: 1695118662819349612
-    second: Textures_1_1
-  - first:
-      213: -1344240484306533733
-    second: Textures_1_2
-  - first:
-      213: -4149522977607384336
-    second: Textures_1_3
+      213: 5920075625099455066
+    second: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_3"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -128,27 +113,27 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 47
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Textures_1_0
+      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_0"
       rect:
         serializedVersion: 2
-        x: 947
-        y: 964
-        width: 1085
-        height: 2331
+        x: 55
+        y: 81
+        width: 1033
+        height: 583
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94694246f23cd52f0800000000000000
-      internalID: -982414535385901495
+      spriteID: 01ef20712a64abf90800000000000000
+      internalID: -6937154614026109424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Textures_1_1
+      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_1"
       rect:
         serializedVersion: 2
-        x: 155
-        y: 182
-        width: 704
-        height: 704
+        x: 1134
+        y: 584
+        width: 107
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c648b755175468710800000000000000
-      internalID: 1695118662819349612
+      spriteID: 94168e6960d43a390800000000000000
+      internalID: -7808312638233353911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Textures_1_2
+      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_2"
       rect:
         serializedVersion: 2
-        x: 980
-        y: 19
-        width: 796
-        height: 797
+        x: 1128
+        y: 463
+        width: 108
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b92c530d66c485de0800000000000000
-      internalID: -1344240484306533733
+      spriteID: 018b8362b8a733d90800000000000000
+      internalID: -7119211847882328048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Textures_1_3
+      name: "\u0411\u0435\u0437 \u0438\u043C\u0435\u043D\u0438-1_3"
       rect:
         serializedVersion: 2
-        x: 1844
-        y: 19
-        width: 800
-        height: 800
+        x: 1158
+        y: 389
+        width: 54
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,8 +204,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f2046446dee966c0800000000000000
-      internalID: -4149522977607384336
+      spriteID: a5a60854a65582250800000000000000
+      internalID: 5920075625099455066
       vertices: []
       indices: 
       edges: []

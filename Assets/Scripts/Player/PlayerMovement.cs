@@ -45,9 +45,9 @@ public class PlayerMovement : MonoBehaviour
                 _touch = Input.GetTouch(0);
                 Vector2 touchPosition = _camera.ScreenToWorldPoint(_touch.position);
                 Vector2 clampedTouchPosition = new Vector2(
-                    touchPosition.x, 
-                    Mathf.Clamp(touchPosition.y,-3.5f, -0.1f)
-                );
+                    Mathf.Clamp(touchPosition.x, -1.89f, 1.89f), 
+                    Mathf.Clamp(touchPosition.y,-3.65f, -0.1f));
+                
                 if (_touch.phase == TouchPhase.Moved || _touch.phase == TouchPhase.Began)
                 {
                     _rigidbody.MovePosition(
@@ -65,11 +65,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
                 Vector2 clampedMousePosition = new Vector2(
-                    mousePosition.x, Mathf.Clamp(mousePosition.y, -3.5f, -0.1f));
+                    Mathf.Clamp(mousePosition.x, -1.89f, 1.89f),
+                    Mathf.Clamp(mousePosition.y, -3.65f, -0.1f));
             
                 _rigidbody.MovePosition(
                     Vector2.MoveTowards(_rigidbody.position, clampedMousePosition, 
-                        Time.fixedDeltaTime * _speed));   
+                        Time.fixedDeltaTime * _speed));
             }
         }
 #endif

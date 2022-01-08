@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Puck : MonoBehaviour
 {
+    [SerializeField] private float _maxVelocity;
     private Rigidbody2D _rigidbody;
     // private Vector2 _lastVelocity;
 
@@ -16,23 +17,15 @@ public class Puck : MonoBehaviour
     private void FixedUpdate()
     {
         LimitVelocity();
-        LimitMovement();
+        // LimitMovement();
     }
 
     private void LimitVelocity()
     {
-        if (_rigidbody.velocity.magnitude > 20f)
+        if (_rigidbody.velocity.magnitude > _maxVelocity)
         {
-            _rigidbody.velocity = _rigidbody.velocity.normalized * 20f;
+            _rigidbody.velocity = _rigidbody.velocity.normalized * _maxVelocity;
         }
-    }
-
-    private void LimitMovement()
-    {
-        _rigidbody.position = new Vector2(
-            Mathf.Clamp(_rigidbody.position.x, -1.89f, 1.89f), 
-            Mathf.Clamp(_rigidbody.position.y, -4.4f, 4.4f)
-        );
     }
 
     /*private void OnCollisionEnter2D(Collision2D collision)

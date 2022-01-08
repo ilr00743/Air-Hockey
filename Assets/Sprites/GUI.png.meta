@@ -191,10 +191,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 3
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -203,10 +203,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 3
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -215,10 +215,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 3
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -227,10 +227,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 3
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -244,10 +244,10 @@ TextureImporter:
       name: GUI_1
       rect:
         serializedVersion: 2
-        x: 784
-        y: 1516
+        x: 161
+        y: 604
         width: 392
-        height: 138
+        height: 136
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: GUI_2
       rect:
         serializedVersion: 2
-        x: 1227
-        y: 1520
-        width: 393
-        height: 140
+        x: 604
+        y: 608
+        width: 396
+        height: 134
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +286,10 @@ TextureImporter:
       name: GUI_3
       rect:
         serializedVersion: 2
-        x: 128
-        y: 1188
-        width: 666
-        height: 163
+        x: 28
+        y: 492
+        width: 124
+        height: 115
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: GUI_4
       rect:
         serializedVersion: 2
-        x: 817
-        y: 644
-        width: 611
-        height: 787
+        x: 226
+        y: 440
+        width: 113
+        height: 117
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: GUI_5
       rect:
         serializedVersion: 2
-        x: 1510
-        y: 770
-        width: 227
-        height: 538
+        x: 391
+        y: 466
+        width: 99
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +349,10 @@ TextureImporter:
       name: GUI_6
       rect:
         serializedVersion: 2
-        x: 148
-        y: 972
-        width: 105
-        height: 84
+        x: 699
+        y: 60
+        width: 227
+        height: 539
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: GUI_7
       rect:
         serializedVersion: 2
-        x: 310
-        y: 967
-        width: 97
-        height: 97
+        x: 94
+        y: 140
+        width: 265
+        height: 268
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,10 +391,10 @@ TextureImporter:
       name: GUI_8
       rect:
         serializedVersion: 2
-        x: 475
-        y: 967
-        width: 103
-        height: 103
+        x: 380
+        y: 140
+        width: 272
+        height: 271
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -409,540 +409,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_9
-      rect:
-        serializedVersion: 2
-        x: 633
-        y: 972
-        width: 131
-        height: 92
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b51571445b8a41ff0800000000000000
-      internalID: -66242598018789029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_10
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 818
-        width: 71
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe04bae6e6e747e70800000000000000
-      internalID: 9112046958845575407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_11
-      rect:
-        serializedVersion: 2
-        x: 316
-        y: 820
-        width: 88
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc40b2e5f5c0d1050800000000000000
-      internalID: 5772783901100147917
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_12
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 822
-        width: 126
-        height: 112
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da983a8d898ad2730800000000000000
-      internalID: 3976019420461107629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_13
-      rect:
-        serializedVersion: 2
-        x: 631
-        y: 819
-        width: 132
-        height: 119
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2475b873d55b96930800000000000000
-      internalID: 4137037144684975938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_19
-      rect:
-        serializedVersion: 2
-        x: 174
-        y: 659
-        width: 52
-        height: 127
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86c8635cc6d5bc9b0800000000000000
-      internalID: -5058847034674082712
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_20
-      rect:
-        serializedVersion: 2
-        x: 292
-        y: 655
-        width: 134
-        height: 134
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d3481cca3a227f80800000000000000
-      internalID: -8110373546920229927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_21
-      rect:
-        serializedVersion: 2
-        x: 466
-        y: 670
-        width: 122
-        height: 113
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2295326efec6efab0800000000000000
-      internalID: -4972417160956389086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_22
-      rect:
-        serializedVersion: 2
-        x: 637
-        y: 671
-        width: 124
-        height: 120
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed6bc4169af5c58f0800000000000000
-      internalID: -550459873359513890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_23
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 519
-        width: 77
-        height: 106
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3e39d07d0e1a71d0800000000000000
-      internalID: -3352333929547219395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_24
-      rect:
-        serializedVersion: 2
-        x: 310
-        y: 509
-        width: 98
-        height: 116
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79142a8daeb7b0c10800000000000000
-      internalID: 2020845106392875415
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_28
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 510
-        width: 126
-        height: 114
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e9fce68f4c07efb0800000000000000
-      internalID: -4618709357139527197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_29
-      rect:
-        serializedVersion: 2
-        x: 828
-        y: 328
-        width: 268
-        height: 270
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a10d72c8d0f2f27d0800000000000000
-      internalID: -2941080296417144806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_31
-      rect:
-        serializedVersion: 2
-        x: 155
-        y: 350
-        width: 91
-        height: 116
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f22d9dd677b87000800000000000000
-      internalID: 33978718357365493
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_32
-      rect:
-        serializedVersion: 2
-        x: 296
-        y: 356
-        width: 126
-        height: 118
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e60ba44ae98e5b80800000000000000
-      internalID: -8404128215359355159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_33
-      rect:
-        serializedVersion: 2
-        x: 457
-        y: 359
-        width: 139
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f61f3d3134d47ef30800000000000000
-      internalID: 4604734094500426095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_34
-      rect:
-        serializedVersion: 2
-        x: 662
-        y: 348
-        width: 75
-        height: 118
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d51d83c5eff1d540800000000000000
-      internalID: 5031083621042951633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_35
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 214
-        width: 113
-        height: 115
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0c19dedf1a155bc0800000000000000
-      internalID: -3795098386804696052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_36
-      rect:
-        serializedVersion: 2
-        x: 309
-        y: 240
-        width: 99
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1519c1c362c669500800000000000000
-      internalID: 402628128169300305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_37
-      rect:
-        serializedVersion: 2
-        x: 469
-        y: 218
-        width: 115
-        height: 110
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6b39eb01c721ed10800000000000000
-      internalID: 2153045806941813614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_38
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 218
-        width: 119
-        height: 94
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 368a01b40b9f4fb70800000000000000
-      internalID: 8932038496551479395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_39
-      rect:
-        serializedVersion: 2
-        x: 179
-        y: 78
-        width: 43
-        height: 106
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 854da922670c72970800000000000000
-      internalID: 8730158016300242008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_40
-      rect:
-        serializedVersion: 2
-        x: 297
-        y: 68
-        width: 123
-        height: 126
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ed8ad78348753c00800000000000000
-      internalID: 879741533658189286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_41
-      rect:
-        serializedVersion: 2
-        x: 472
-        y: 68
-        width: 109
-        height: 101
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b52a9ba50036f98f0800000000000000
-      internalID: -531597377833164197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_42
-      rect:
-        serializedVersion: 2
-        x: 648
-        y: 68
-        width: 104
-        height: 105
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb6cc2a503f92ae90800000000000000
-      internalID: -7015870239469680965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: GUI_0
       rect:
         serializedVersion: 2
-        x: 455
-        y: 512
-        width: 145
-        height: 108
+        x: 37
+        y: 627
+        width: 87
+        height: 117
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

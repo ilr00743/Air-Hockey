@@ -8,6 +8,8 @@ public class GoalTrigger : MonoBehaviour
     [SerializeField] private Puck _puck;
     [SerializeField] private TMP_Text _scoreText;
     [SerializeField] private LevelSettings _levelSettings;
+    [SerializeField] private ParticleSystem _goalParticle;
+
     private int _currentScore;
 
     public int CurrentScore => _currentScore;
@@ -23,12 +25,14 @@ public class GoalTrigger : MonoBehaviour
     {
         if (collider.TryGetComponent(out Puck puck))
         {
-            _scoreText.text = (++_currentScore).ToString();
-            StartCoroutine(_puck.ResetPosition(0, SetAttackSide()));
             if (_currentScore == _levelSettings.GetScoreToWin())
             {
                 GameOver?.Invoke();
             }
+
+            _scoreText.text = (++_currentScore).ToString();
+            StartCoroutine(_puck.ResetPosition(0, SetAttackSide()));
+            _goalParticle.Play();
         }
     }
 
