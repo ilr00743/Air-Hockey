@@ -42,7 +42,7 @@ public class AIMovement : MonoBehaviour
     {
         if (collision.collider.TryGetComponent(out Puck puck))
         {
-            StartCoroutine(OnCooldownAfterKick());
+            StartCoroutine(CooldownAfterKick());
         }
     }
 
@@ -64,7 +64,7 @@ public class AIMovement : MonoBehaviour
             _speedMovement * Time.fixedDeltaTime));
     }
 
-    private IEnumerator OnCooldownAfterKick()
+    private IEnumerator CooldownAfterKick()
     {
         yield return new WaitForSeconds(0.07f);
         _canKick = false;
