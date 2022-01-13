@@ -37,14 +37,6 @@ namespace UI
 
         private void ChooseWinner()
         {
-            /*if (_goals[0].CurrentScore == _levelSettings.GetScoreToWin())
-            {
-                _winLose.SetText("You Win!");
-            }
-            if (_goals[1].CurrentScore == _levelSettings.GetScoreToWin())
-            {
-                _winLose.SetText("You Lose!");
-            }*/
             _winLose.SetText(_goals[0].CurrentScore == _levelSettings.GetScoreToWin() ? "You Win!" : "You Lose!");
         }
 

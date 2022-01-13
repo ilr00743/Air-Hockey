@@ -15,7 +15,6 @@ namespace UI
 
         private void Start()
         {
-            // _scoreToWin = PlayerPrefs.GetInt("Score", 7);
             _scoreToWin = 7;
             _scoreToWinText.text = _scoreToWin.ToString();
         }

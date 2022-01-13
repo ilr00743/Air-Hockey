@@ -5088,7 +5088,7 @@ GameObject:
   - component: {fileID: 91056747}
   - component: {fileID: 91056746}
   m_Layer: 5
-  m_Name: Text
+  m_Name: MaxFPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5326,7 +5326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 0
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
@@ -5551,8 +5551,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2, y: 0.08996582}
+  m_SizeDelta: {x: 42.63, y: 66.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &312003811
 MonoBehaviour:
@@ -5630,7 +5630,7 @@ GameObject:
   - component: {fileID: 440657290}
   - component: {fileID: 440657289}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: MinFPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6852,7 +6852,7 @@ GameObject:
   - component: {fileID: 799182594}
   - component: {fileID: 799182593}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: CurrentFPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8228,7 +8228,7 @@ ParticleSystem:
   looping: 0
   prewarm: 0
   playOnAwake: 0
-  useUnscaledTime: 0
+  useUnscaledTime: 1
   autoRandomSeed: 1
   useRigidbodyForVelocity: 0
   startDelay:
@@ -13051,6 +13051,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679766097}
   m_CullTransparentMesh: 1
+--- !u!1 &1724698929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1724698930}
+  - component: {fileID: 1724698931}
+  m_Layer: 0
+  m_Name: FPSLimiter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1724698930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724698929}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.0418904, y: -6.2284203, z: -2.3991396}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1724698931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724698929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 542e5f009484c0a4ca3422aae2e96b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1748848573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8020468823111993016, guid: 09480d775e219374e9f2d9da4aa4fa87, type: 3}
@@ -13679,7 +13722,7 @@ GameObject:
   - component: {fileID: 2002649616}
   - component: {fileID: 2002649615}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: FPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14052,16 +14095,16 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: de9a86cb5a5e01e4d930a5bf98619399, type: 2}
     - target: {fileID: 1163549344291317470, guid: 4a1a8a6fd48a4994c995a1606059a65f, type: 3}
       propertyPath: m_Size.x
-      value: 0.54
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 1163549344291317470, guid: 4a1a8a6fd48a4994c995a1606059a65f, type: 3}
       propertyPath: m_Size.y
-      value: 0.56
+      value: 0.48000002
       objectReference: {fileID: 0}
     - target: {fileID: 1163549344291317470, guid: 4a1a8a6fd48a4994c995a1606059a65f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 5920075625099455066, guid: f1b3fd82c36593b4c9dfcd447cfc13ec, type: 3}
+      objectReference: {fileID: 6875313188632250476, guid: f1b3fd82c36593b4c9dfcd447cfc13ec, type: 3}
     - target: {fileID: 1163549344291317470, guid: 4a1a8a6fd48a4994c995a1606059a65f, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -14173,16 +14216,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1307139651590192190, guid: f6bffaf247784c94e9e2be76b38b19bd, type: 3}
       propertyPath: m_Size.x
-      value: 1.0699999
+      value: 1.17
       objectReference: {fileID: 0}
     - target: {fileID: 1307139651590192190, guid: f6bffaf247784c94e9e2be76b38b19bd, type: 3}
       propertyPath: m_Size.y
-      value: 1.09
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1307139651590192190, guid: f6bffaf247784c94e9e2be76b38b19bd, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7808312638233353911, guid: f1b3fd82c36593b4c9dfcd447cfc13ec, type: 3}
+      objectReference: {fileID: -8262991748867391410, guid: f1b3fd82c36593b4c9dfcd447cfc13ec, type: 3}
     - target: {fileID: 1307139651590192190, guid: f6bffaf247784c94e9e2be76b38b19bd, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -14431,12 +14474,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566635428572482865, guid: 836b916175dc6ee45bc7488c2ed684e6, type: 3}
       propertyPath: m_Size.y
-      value: 1.1
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 7566635428572482865, guid: 836b916175dc6ee45bc7488c2ed684e6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7119211847882328048, guid: f1b3fd82c36593b4c9dfcd447cfc13ec, type: 3}
+      objectReference: {fileID: 7234583761468912955, guid: f1b3fd82c36593b4c9dfcd447cfc13ec, type: 3}
     - target: {fileID: 7566635428572482865, guid: 836b916175dc6ee45bc7488c2ed684e6, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -14585,7 +14628,7 @@ PrefabInstance:
     - target: {fileID: 8020468823111993019, guid: 09480d775e219374e9f2d9da4aa4fa87, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6937154614026109424, guid: f1b3fd82c36593b4c9dfcd447cfc13ec, type: 3}
+      objectReference: {fileID: -6460368395533782001, guid: f1b3fd82c36593b4c9dfcd447cfc13ec, type: 3}
     - target: {fileID: 8020468823111993019, guid: 09480d775e219374e9f2d9da4aa4fa87, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1

@@ -14,6 +14,18 @@ TextureImporter:
   - first:
       213: 5920075625099455066
     second: Puck
+  - first:
+      213: -6460368395533782001
+    second: SpriteAtlas_0
+  - first:
+      213: 6875313188632250476
+    second: SpriteAtlas_1
+  - first:
+      213: 7234583761468912955
+    second: SpriteAtlas_2
+  - first:
+      213: -8262991748867391410
+    second: SpriteAtlas_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,85 +139,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ground
+      name: SpriteAtlas_0
       rect:
         serializedVersion: 2
-        x: 55
+        x: 56
         y: 81
-        width: 1033
+        width: 1032
         height: 583
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01ef20712a64abf90800000000000000
-      internalID: -6937154614026109424
+      spriteID: f047c0a3c292856a0800000000000000
+      internalID: -6460368395533782001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Red
+      name: SpriteAtlas_1
       rect:
         serializedVersion: 2
-        x: 1134
-        y: 584
+        x: 1146
+        y: 402
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68cbf70be40a6f50800000000000000
+      internalID: 6875313188632250476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 286
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35f920c997666460800000000000000
+      internalID: 7234583761468912955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 166
         width: 107
-        height: 109
+        height: 107
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94168e6960d43a390800000000000000
-      internalID: -7808312638233353911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Blue
-      rect:
-        serializedVersion: 2
-        x: 1128
-        y: 463
-        width: 108
-        height: 110
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 018b8362b8a733d90800000000000000
-      internalID: -7119211847882328048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Puck
-      rect:
-        serializedVersion: 2
-        x: 1158
-        y: 389
-        width: 54
-        height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5a60854a65582250800000000000000
-      internalID: 5920075625099455066
+      spriteID: e4086ca98c4f35d80800000000000000
+      internalID: -8262991748867391410
       vertices: []
       indices: 
       edges: []
