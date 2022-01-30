@@ -1,15 +1,14 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void Settings()
+    public void OpenSettings()
     {
         SceneManager.LoadScene("Settings");
     }
 
-    public void Play()
+    public void StartGame()
     {
         SceneManager.LoadScene("Level");
     }

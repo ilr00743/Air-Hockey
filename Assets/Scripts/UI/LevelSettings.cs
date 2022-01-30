@@ -2,52 +2,49 @@
 using TMPro;
 using UnityEngine;
 
-namespace UI
+public class LevelSettings : MonoBehaviour
 {
-    public class LevelSettings : MonoBehaviour
+    [SerializeField] private TMP_Text _scoreToWinText;
+    [SerializeField] private int _minScore;
+    [SerializeField] private int _maxScore;
+    private int _scoreToWin;
+
+    public event Action SettingsChanged;
+
+    private void Start()
     {
-        [SerializeField] private TMP_Text _scoreToWinText;
-        [SerializeField] private int _minScore;
-        [SerializeField] private int _maxScore;
-        private int _scoreToWin;
-
-        public event Action SettingsChanged;
-
-        private void Start()
-        {
-            _scoreToWin = 7;
-            _scoreToWinText.text = _scoreToWin.ToString();
-        }
+        _scoreToWin = 7;
+        _scoreToWinText.text = _scoreToWin.ToString();
+    }
         
-        public void AddScoreToWin()
+    public void AddGoalsToWin()
+    {
+        if (_scoreToWin < _maxScore)
         {
-            if (_scoreToWin < _maxScore)
-            {
-                _scoreToWin++;
-            }
-
-            _scoreToWinText.text = _scoreToWin.ToString();
+            _scoreToWin++;
         }
 
-        public void SubtractScoreToWin()
+        _scoreToWinText.text = _scoreToWin.ToString();
+    }
+
+    public void SubtractGoalsToWin()
+    {
+        if (_scoreToWin > _minScore)
         {
-            if (_scoreToWin > _minScore)
-            {
-                _scoreToWin--;
-            }
+            _scoreToWin--;
+        }
             
-            _scoreToWinText.text = _scoreToWin.ToString();
-        }
+        _scoreToWinText.text = _scoreToWin.ToString();
+    }
 
-        public void Submit()
-        {
-            SettingsChanged?.Invoke();
-            gameObject.SetActive(false);
-        }
+    public void Submit()
+    {
+        SettingsChanged?.Invoke();
+        gameObject.SetActive(false);
+    }
         
-        public int GetScoreToWin()
-        {
-            return _scoreToWin;
-        }
+    public int GetScoreToWin()
+    {
+        return _scoreToWin;
     }
 }

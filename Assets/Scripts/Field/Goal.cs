@@ -1,22 +1,19 @@
 using System;
 using TMPro;
-using UI;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class GoalTrigger : MonoBehaviour
+public class Goal : MonoBehaviour
 {
-    [SerializeField] private Puck _puck;
+    [SerializeField] private Puck _puck; 
     [SerializeField] private TMP_Text _scoreText;
     [SerializeField] private LevelSettings _levelSettings;
     [SerializeField] private ParticleSystem _goalParticle;
-    
     private int _currentScore;
     
     public int CurrentScore => _currentScore;
-    
     public event Action GameOver;
-    
+
     private void Start()
     {
         _currentScore = 0;
@@ -26,14 +23,29 @@ public class GoalTrigger : MonoBehaviour
     {
         if (collider.TryGetComponent(out Puck puck))
         {
-            _scoreText.text = (++_currentScore).ToString();
-            StartCoroutine(_puck.SetPositionAfterGoal());
+            UpdateScore();
+            PlacePuck();
             _goalParticle.Play();
 
-            if (_currentScore == _levelSettings.GetScoreToWin())
-            {
-                GameOver?.Invoke();
-            }
+            CheckGameEnd();
         }
+    }
+
+    private void CheckGameEnd()
+    {
+        if (_currentScore == _levelSettings.GetScoreToWin())
+        {
+            GameOver?.Invoke();
+        }
+    }
+
+    private void PlacePuck()
+    {
+        StartCoroutine(_puck.TakePositionAfterGoal());
+    }
+
+    private void UpdateScore()
+    {
+        _scoreText.text = (++_currentScore).ToString();
     }
 }

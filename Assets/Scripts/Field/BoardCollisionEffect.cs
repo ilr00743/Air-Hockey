@@ -1,12 +1,14 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class BoardCollisionHandler : MonoBehaviour
+public class BoardCollisionEffect : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _particle;
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        _particle.Play();
+        if (col.collider.TryGetComponent(out Puck puck))
+        {
+            Debug.Log("puck");
+        }
     }
 }

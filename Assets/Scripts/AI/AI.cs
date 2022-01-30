@@ -4,7 +4,7 @@ using Interfaces;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class AIMovement : MonoBehaviour, IMoveable
+public class AI : MonoBehaviour, IMoveable
 {
     [SerializeField] private Puck puck;
     [SerializeField] private float _speedMovement;

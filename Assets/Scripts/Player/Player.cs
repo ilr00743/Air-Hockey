@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovement : MonoBehaviour, IMoveable
+public class Player : MonoBehaviour, IMoveable
 {
     [SerializeField] private Camera _camera;
     [SerializeField] private float _speed;

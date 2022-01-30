@@ -1,28 +1,23 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+public class PauseButton : MonoBehaviour
 {
-    public class PauseButton : MonoBehaviour
+    [SerializeField] private PausePanel _pausePanel;
+    [SerializeField] private Button _button;
+        
+    private void OnEnable()
     {
-        [SerializeField] private GameObject _pausePanel;
-        [SerializeField] private Button _pauseButton;
+        _button.onClick.AddListener(StartPause);
+    }
 
-        private void OnEnable()
-        {
-            _pauseButton.onClick.AddListener(ShowPausePanel);
-        }
+    private void OnDisable()
+    {
+        _button.onClick.RemoveListener(StartPause);
+    }
 
-        private void OnDisable()
-        {
-            _pauseButton.onClick.RemoveListener(ShowPausePanel);
-        }
-
-        private void ShowPausePanel()
-        {
-            _pausePanel.SetActive(true);
-            Time.timeScale = 0;
-        }
+    private void StartPause()
+    {
+        _pausePanel.Open();
     }
 }

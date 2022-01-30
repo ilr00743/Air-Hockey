@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainSettings : MonoBehaviour
+public class Settings : MonoBehaviour
 {
     public void ReturnToMainMenu()
     {
