@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections;
+using Interfaces;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class AIMovement : MonoBehaviour
+public class AIMovement : MonoBehaviour, IMoveable
 {
-    [SerializeField] private Puck _puck;
+    [SerializeField] private Puck puck;
     [SerializeField] private float _speedMovement;
     private Rigidbody2D _rigidbody;
     private Vector2 _startPosition;
     private bool _canKick;
+    
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -18,7 +20,7 @@ public class AIMovement : MonoBehaviour
     private void Start()
     {
         _canKick = true;
-        _startPosition = new Vector2(0f, 2.9f);
+        _startPosition = new Vector2(0f, 4f);
     }
 
     private void FixedUpdate()
@@ -26,13 +28,13 @@ public class AIMovement : MonoBehaviour
         Move();
     }
 
-    private void Move()
+    public void Move()
     {
         if (IsPuckOnSide())
         {
             MoveToTarget();
         }
-        if(!_canKick)
+        if(!_canKick || !IsPuckOnSide())
         {
             TakeStartPosition();
         }
@@ -48,7 +50,7 @@ public class AIMovement : MonoBehaviour
 
     private bool IsPuckOnSide()
     {
-        return _puck.GetPosition().y >= 0.2f && _puck.GetPosition().y <= 3.88f;
+        return puck.GetPosition().y >= 0.1f && puck.GetPosition().y <= 4.32f;
     }
 
     private void TakeStartPosition()
@@ -60,7 +62,7 @@ public class AIMovement : MonoBehaviour
 
     private void MoveToTarget()
     {
-        _rigidbody.MovePosition(Vector2.MoveTowards(_rigidbody.position, _puck.GetPosition(),
+        _rigidbody.MovePosition(Vector2.Lerp(_rigidbody.position, puck.GetPosition(),
             _speedMovement * Time.fixedDeltaTime));
     }
 

@@ -1,52 +1,55 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class Puck : MonoBehaviour
+namespace Puck
 {
-    [SerializeField] private float _maxVelocity;
-    private Rigidbody2D _rigidbody;
-    // private Vector2 _lastVelocity;
-
-    private void Awake()
+    [RequireComponent(typeof(Rigidbody2D))]
+    public class PuckMovement : MonoBehaviour
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
-    }
+        [SerializeField] private float _maxVelocity;
+        private Rigidbody2D _rigidbody;
 
-    private void FixedUpdate()
-    {
-        LimitVelocity();
-    }
-
-    private void LimitVelocity()
-    {
-        if (_rigidbody.velocity.magnitude > _maxVelocity)
+        private void Awake()
         {
-            _rigidbody.velocity = _rigidbody.velocity.normalized * _maxVelocity;
+            _rigidbody = GetComponent<Rigidbody2D>();
         }
-    }
 
-    /*private void OnCollisionEnter2D(Collision2D collision)
-    {
-        var speed = _lastVelocity.magnitude;
-        var direction = Vector2.Reflect(_lastVelocity.normalized, collision.contacts[0].normal);
+        private void FixedUpdate()
+        {
+            LimitVelocity();
+        }
 
-        _rigidbody.velocity = direction * Mathf.Max(speed, 0f);
-    }*/
+        private void LimitVelocity()
+        {
+            if (_rigidbody.velocity.magnitude > _maxVelocity)
+            {
+                _rigidbody.velocity = _rigidbody.velocity.normalized * _maxVelocity;
+            }
+        }
 
-    public IEnumerator ResetPosition(float x, float y)
-    {
-        this.gameObject.SetActive(false);
-        yield return new WaitForSeconds(0.05f);
-        _rigidbody.velocity = Vector2.zero;
-        yield return new WaitForSeconds(0.5f);
-        this.gameObject.SetActive(true);
-        _rigidbody.position = new Vector2(x, y);
-    }
+        private float GetAttackSide()
+        {
+            float playerSide = -0.9f;
+            float aiSide = 0.9f;
+        
+            return _rigidbody.position.y < 0 ? playerSide : aiSide;
+        }
+    
+        public IEnumerator SetPositionAfterGoal()
+        { 
+            gameObject.SetActive(false);
+            yield return new WaitForSeconds(0.05f);
+        
+            _rigidbody.velocity = Vector2.zero;
+            yield return new WaitForSeconds(0.5f);
+        
+            gameObject.SetActive(true);
+            _rigidbody.position = new Vector2(0, GetAttackSide());
+        }
 
-    public Vector2 GetPosition()
-    {
-        return _rigidbody.position;
+        public Vector2 GetPosition()
+        {
+            return _rigidbody.position;
+        }
     }
 }
