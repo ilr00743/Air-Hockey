@@ -9,7 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-/Assets/Tests
+/Assets/Tests/PlayMode/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -27,7 +27,7 @@
 # Visual Studio cache directory
 .vs/
 
-# Jetbrains Rider cahe directory
+# Jetbrains Rider cache directory
 .idea/
 
 # Gradle cache directory
