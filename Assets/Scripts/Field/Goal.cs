@@ -9,6 +9,7 @@ public class Goal : MonoBehaviour
     [SerializeField] private TMP_Text _scoreText;
     [SerializeField] private LevelSettings _levelSettings;
     [SerializeField] private ParticleSystem _goalParticle;
+    [SerializeField] private AudioSource _audio;
     private int _currentScore;
     
     public int CurrentScore => _currentScore;
@@ -26,7 +27,7 @@ public class Goal : MonoBehaviour
             UpdateScore();
             PlacePuck();
             _goalParticle.Play();
-
+            _audio.Play();
             CheckGameEnd();
         }
     }

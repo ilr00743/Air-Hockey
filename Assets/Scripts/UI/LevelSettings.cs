@@ -7,13 +7,12 @@ public class LevelSettings : MonoBehaviour
     [SerializeField] private TMP_Text _scoreToWinText;
     [SerializeField] private int _minScore;
     [SerializeField] private int _maxScore;
-    private int _scoreToWin;
+    private int _scoreToWin = 7;
 
     public event Action SettingsChanged;
 
     private void Start()
     {
-        _scoreToWin = 7;
         _scoreToWinText.text = _scoreToWin.ToString();
     }
         

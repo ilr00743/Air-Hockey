@@ -1,17 +1,18 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Interfaces;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class AI : MonoBehaviour, IMoveable
 {
-    [SerializeField] private Puck puck;
+    [SerializeField] private Puck _puck;
     [SerializeField] private float _speedMovement;
+    [SerializeField] private AudioSource _audio;
     private Rigidbody2D _rigidbody;
-    private Vector2 _startPosition;
+    private Vector2 _startPosition = new Vector2(0f, 4f);
     private bool _canKick;
-    
+    public Vector2 StartPosition => _startPosition;
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -20,7 +21,6 @@ public class AI : MonoBehaviour, IMoveable
     private void Start()
     {
         _canKick = true;
-        _startPosition = new Vector2(0f, 4f);
     }
 
     private void FixedUpdate()
@@ -44,13 +44,14 @@ public class AI : MonoBehaviour, IMoveable
     {
         if (collision.collider.TryGetComponent(out Puck puck))
         {
+            _audio.Play();
             StartCoroutine(CooldownAfterKick());
         }
     }
 
     private bool IsPuckOnSide()
     {
-        return puck.GetPosition().y >= 0.1f && puck.GetPosition().y <= 4.32f;
+        return _puck.GetPosition().y >= 0.1f && _puck.GetPosition().y <= 4.32f;
     }
 
     private void TakeStartPosition()
@@ -62,7 +63,7 @@ public class AI : MonoBehaviour, IMoveable
 
     private void MoveToTarget()
     {
-        _rigidbody.MovePosition(Vector2.Lerp(_rigidbody.position, puck.GetPosition(),
+        _rigidbody.MovePosition(Vector2.Lerp(_rigidbody.position, _puck.GetPosition(),
             _speedMovement * Time.fixedDeltaTime));
     }
 

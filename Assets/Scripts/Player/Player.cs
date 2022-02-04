@@ -1,12 +1,14 @@
-﻿using Interfaces;
+﻿using System;
+using Interfaces;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour, IMoveable
 {
     [SerializeField] private Camera _camera;
-    [SerializeField] private float _speed;
     [SerializeField] private LevelSettings _settings;
+    [SerializeField] private AudioSource _audio;
+    [SerializeField] private float _speed;
     private Rigidbody2D _rigidbody;
     private Touch _touch;
     private bool _canMove;
@@ -24,11 +26,6 @@ public class Player : MonoBehaviour, IMoveable
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-    }
-
-    private void Start()
-    {
-        _canMove = false;
     }
 
     private void FixedUpdate()
@@ -49,7 +46,6 @@ public class Player : MonoBehaviour, IMoveable
                     Time.fixedDeltaTime * _speed));
             }
         }
-        
             
 #if UNITY_EDITOR
         if (_canMove && Input.GetMouseButton(0))
@@ -66,5 +62,13 @@ public class Player : MonoBehaviour, IMoveable
     private void OnSettingsChanged()
     {
         _canMove = true;
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.collider.TryGetComponent(out Puck puck))
+        {
+            _audio.Play();
+        }
     }
 }
