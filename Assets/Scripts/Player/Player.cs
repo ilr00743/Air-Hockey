@@ -31,7 +31,7 @@ public class Player : MonoBehaviour, IMoveable
 
     private void Start()
     {
-        _offset = new Vector2(0, 35f);
+        _offset = new Vector2(-10f, 80f);
     }
 
     private void FixedUpdate()
@@ -53,16 +53,16 @@ public class Player : MonoBehaviour, IMoveable
             }
         }
 
-/*#if UNITY_EDITOR
+#if UNITY_EDITOR
         if (_canMove && Input.GetMouseButton(0))
         {
-            Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition + _offset);
+            Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition + (Vector3)_offset);
 
             _rigidbody.MovePosition(
                 Vector2.Lerp(_rigidbody.position, mousePosition,
                     Time.fixedDeltaTime * _speed));
         }
-#endif*/
+#endif
     }
 
     private void OnSettingsChanged()

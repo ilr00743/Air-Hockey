@@ -1,7 +1,9 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Advertisements;
 
 public class GameOver : MonoBehaviour
 {
@@ -20,6 +22,14 @@ public class GameOver : MonoBehaviour
 
         _retry.onClick.AddListener(Retry);
         _home.onClick.AddListener(GoToMenu);
+    }
+
+    private void Start()
+    {
+        if (Advertisement.isSupported)
+        {
+            Advertisement.Initialize("4602167", false);
+        }
     }
 
     private void OnDisable()
@@ -52,13 +62,20 @@ public class GameOver : MonoBehaviour
 
     private void Retry()
     {
+        ShowAd();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
     }
 
     private void GoToMenu()
     {
+        ShowAd();
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1;
+    }
+
+    private void ShowAd()
+    {
+        Advertisement.Show("Interstitial_Android");
     }
 }
