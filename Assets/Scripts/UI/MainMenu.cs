@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private Button _play, _settings;
+    [SerializeField] private Animator _animator;
     private AudioSource _audio;
     private WaitForSeconds _delay = new WaitForSeconds(0.5f);
 
@@ -24,11 +25,13 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
+        _animator.SetTrigger("Start");
         _audio = GetComponent<AudioSource>();
     }
 
     private void StartGame()
     {
+        _animator.SetTrigger("End");
         _audio.Play();
         StartCoroutine(LoadSceneAfterSeconds("Level"));
     }
@@ -36,6 +39,7 @@ public class MainMenu : MonoBehaviour
     private void OpenSettings()
     {
         _audio.Play();
+        _animator.SetTrigger("End");
         StartCoroutine(LoadSceneAfterSeconds("Settings"));
     }
 

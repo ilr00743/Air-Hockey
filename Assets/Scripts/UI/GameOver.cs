@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,6 +12,8 @@ public class GameOver : MonoBehaviour
     [SerializeField] private Goal[] _goals;
     [SerializeField] private Button _retry, _home;
     [SerializeField] private TMP_Text _winLose;
+    [SerializeField] private AudioSource _audio;
+    private WaitForSeconds _delay = new WaitForSeconds(0.5f);
 
     private void OnEnable()
     {
@@ -62,20 +64,28 @@ public class GameOver : MonoBehaviour
 
     private void Retry()
     {
+        _audio.Play();
         ShowAd();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        StartCoroutine(LoadSceneAfterSeconds(SceneManager.GetActiveScene().name));
         Time.timeScale = 1;
     }
 
     private void GoToMenu()
     {
+        _audio.Play();
         ShowAd();
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(LoadSceneAfterSeconds("MainMenu"));
         Time.timeScale = 1;
     }
 
     private void ShowAd()
     {
         Advertisement.Show("Interstitial_Android");
+    }
+    
+    private IEnumerator LoadSceneAfterSeconds(string sceneName)
+    {
+        yield return _delay;
+        SceneManager.LoadScene(sceneName);
     }
 }
