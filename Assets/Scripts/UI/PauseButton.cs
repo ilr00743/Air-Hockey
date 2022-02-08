@@ -1,18 +1,11 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(AudioSource))]
 public class PauseButton : MonoBehaviour
 {
     [SerializeField] private PausePanel _pausePanel;
     [SerializeField] private Button _button;
-    private AudioSource _audio;
-
-    private void Awake()
-    {
-        _audio = GetComponent<AudioSource>();
-    }
+    [SerializeField] private AudioSource _audio;
 
     private void OnEnable()
     {

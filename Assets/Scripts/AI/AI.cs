@@ -11,7 +11,6 @@ public class AI : MonoBehaviour, IMoveable
     private Rigidbody2D _rigidbody;
     private Vector2 _startPosition = new Vector2(0f, 4f);
     private bool _canKick;
-    public Vector2 StartPosition => _startPosition;
 
     private void Awake()
     {
@@ -34,7 +33,8 @@ public class AI : MonoBehaviour, IMoveable
         {
             MoveToTarget();
         }
-        if(!_canKick || !IsPuckOnSide())
+
+        if (!_canKick || !IsPuckOnSide())
         {
             TakeStartPosition();
         }

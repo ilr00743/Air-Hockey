@@ -10,7 +10,7 @@ public class GameOver : MonoBehaviour
     [SerializeField] private Goal[] _goals;
     [SerializeField] private Button _retry, _home;
     [SerializeField] private TMP_Text _winLose;
-        
+
     private void OnEnable()
     {
         foreach (var goal in _goals)
@@ -28,7 +28,7 @@ public class GameOver : MonoBehaviour
         {
             goal.GameOver -= OnGameOver;
         }
-            
+
         _retry.onClick.RemoveListener(Retry);
         _home.onClick.RemoveListener(GoToMenu);
     }

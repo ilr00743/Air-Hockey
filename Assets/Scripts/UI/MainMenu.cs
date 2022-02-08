@@ -1,9 +1,9 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private Button _play, _settings;

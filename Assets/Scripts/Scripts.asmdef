@@ -1,4 +1,17 @@
-﻿{
-  "name": "Scripts",
-  "references": ["Unity.TextMeshPro"]
+{
+    "name": "Scripts",
+    "rootNamespace": "",
+    "references": [
+        "Unity.TextMeshPro",
+        "Plugins"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

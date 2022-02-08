@@ -13,7 +13,7 @@ public class Settings : MonoBehaviour
     {
         throw new NotImplementedException();
     }
-    
+
     public void ChangeMusicVolume()
     {
         throw new NotImplementedException();

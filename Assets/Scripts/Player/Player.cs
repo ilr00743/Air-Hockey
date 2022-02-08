@@ -12,6 +12,7 @@ public class Player : MonoBehaviour, IMoveable
     private Rigidbody2D _rigidbody;
     private Touch _touch;
     private bool _canMove;
+    private Vector2 _offset;
 
     private void OnEnable()
     {
@@ -28,6 +29,11 @@ public class Player : MonoBehaviour, IMoveable
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        _offset = new Vector2(0, 35f);
+    }
+
     private void FixedUpdate()
     {
         Move();
@@ -38,25 +44,25 @@ public class Player : MonoBehaviour, IMoveable
         if (_canMove && Input.touchCount > 0)
         {
             _touch = Input.GetTouch(0);
-            Vector2 touchPosition = _camera.ScreenToWorldPoint(_touch.position);
+            Vector2 touchPosition = _camera.ScreenToWorldPoint(_touch.position + _offset);
 
             if (_touch.phase == TouchPhase.Moved || _touch.phase == TouchPhase.Stationary)
             {
-                _rigidbody.MovePosition(Vector2.Lerp(_rigidbody.position, touchPosition, 
+                _rigidbody.MovePosition(Vector2.Lerp(_rigidbody.position, touchPosition,
                     Time.fixedDeltaTime * _speed));
             }
         }
-            
-#if UNITY_EDITOR
+
+/*#if UNITY_EDITOR
         if (_canMove && Input.GetMouseButton(0))
         {
-            Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
-            
+            Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition + _offset);
+
             _rigidbody.MovePosition(
-                Vector2.Lerp(_rigidbody.position, mousePosition, 
+                Vector2.Lerp(_rigidbody.position, mousePosition,
                     Time.fixedDeltaTime * _speed));
         }
-#endif
+#endif*/
     }
 
     private void OnSettingsChanged()
