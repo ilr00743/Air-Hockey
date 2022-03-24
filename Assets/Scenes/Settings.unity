@@ -686,7 +686,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 900509279}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: ChangeSoundVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &900509274
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +821,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audio: {fileID: 900509280}
   _animator: {fileID: 900509281}
+  _soundSlider: {fileID: 688979365}
+  _musicSlider: {fileID: 1759369164}
 --- !u!82 &900509280
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1777,7 +1791,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 900509279}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: ChangeMusicVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1795026648
 GameObject:
   m_ObjectHideFlags: 0

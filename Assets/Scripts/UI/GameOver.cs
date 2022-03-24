@@ -28,6 +28,7 @@ public class GameOver : MonoBehaviour
 
     private void Start()
     {
+        _audio.volume = PlayerPrefs.GetFloat("Sound");
         if (Advertisement.isSupported)
         {
             Advertisement.Initialize("4602167", false);

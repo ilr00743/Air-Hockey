@@ -13,6 +13,7 @@ public class BoardCollisionEffect : MonoBehaviour
     private void Start()
     {
         _delay = new WaitForSeconds(0.25f);
+        _audio.volume = PlayerPrefs.GetFloat("Sound");
     }
 
     private void OnCollisionEnter2D(Collision2D col)

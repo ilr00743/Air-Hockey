@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class PauseButton : MonoBehaviour
@@ -10,6 +11,11 @@ public class PauseButton : MonoBehaviour
     private void OnEnable()
     {
         _button.onClick.AddListener(StartPause);
+    }
+
+    private void Start()
+    {
+        _audio.volume = PlayerPrefs.GetFloat("Sound");
     }
 
     private void OnDisable()

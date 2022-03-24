@@ -19,6 +19,7 @@ public class AI : MonoBehaviour, IMoveable
 
     private void Start()
     {
+        _audio.volume = PlayerPrefs.GetFloat("Sound");
         _canKick = true;
     }
 

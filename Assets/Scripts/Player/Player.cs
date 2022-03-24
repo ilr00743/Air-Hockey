@@ -31,6 +31,7 @@ public class Player : MonoBehaviour, IMoveable
 
     private void Start()
     {
+        _audio.volume = PlayerPrefs.GetFloat("Sound");
         _offset = new Vector2(-10f, 80f);
     }
 

@@ -17,6 +17,7 @@ public class Goal : MonoBehaviour
 
     private void Start()
     {
+        _audio.volume = PlayerPrefs.GetFloat("Sound");
         _currentScore = 0;
     }
 

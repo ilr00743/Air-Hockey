@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,8 +26,13 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
-        _animator.SetTrigger("Start");
         _audio = GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        _audio.volume = PlayerPrefs.GetFloat("Sound");
+        _animator.SetTrigger("Start");
     }
 
     private void StartGame()

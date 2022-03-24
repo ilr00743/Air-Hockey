@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,6 +14,11 @@ public class PausePanel : MonoBehaviour
     {
         _resume.onClick.AddListener(Close);
         _home.onClick.AddListener(ReturnToMenu);
+    }
+
+    private void Start()
+    {
+        _audio.volume = PlayerPrefs.GetFloat("Sound");
     }
 
     private void OnDisable()

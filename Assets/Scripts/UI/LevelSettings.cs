@@ -14,6 +14,7 @@ public class LevelSettings : MonoBehaviour
 
     private void Start()
     {
+        _audio.volume = PlayerPrefs.GetFloat("Sound");
         _scoreToWinText.text = _scoreToWin.ToString();
     }
 
